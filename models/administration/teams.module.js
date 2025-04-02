@@ -18,14 +18,8 @@ const teamsSchema = new mongoose.Schema({
             player_role: String,
             credits: Number,
             team_short_name: String,
-            isCaptain: {
-                type: Boolean,
-                default: false,
-            },
-            isViceCaptain: {
-                type: Boolean,
-                default: false,
-            },
+            is_captain: Boolean,
+            is_vice_captain: Boolean,
         }],
 
     },

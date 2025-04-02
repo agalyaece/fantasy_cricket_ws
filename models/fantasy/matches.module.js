@@ -15,6 +15,8 @@ const matchSchema = new mongoose.Schema({
                 player_role: String,
                 credits: Number,
                 team_short_name: String,
+                is_captain: Boolean,
+                is_vice_captain: Boolean,
             }]
         }],
         required: true,
@@ -29,6 +31,8 @@ const matchSchema = new mongoose.Schema({
                 player_role: String,
                 credits: Number,
                 team_short_name: String,
+                is_captain: Boolean,
+                is_vice_captain: Boolean,
             }]
         }],
         required: true,

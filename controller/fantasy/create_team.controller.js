@@ -6,10 +6,10 @@ export const createTeam = async (req, res) => {
     const newTeam = new CreateTeam(matches);
     try {
         await newTeam.save();
-        console.log("Team Created successfully");
+        // console.log("Team Created successfully");
         res.status(201).json({ success: true, message: "Team Created successfully", data: newTeam });
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         res.status(500).json({ success: false, message: "Server Error" });
     }
 }
@@ -20,6 +20,6 @@ export const getSelectedTeams = async (req, res) => {
     })
         .catch((err) => {
             res.status(500).send(err.message);
-            console.log(err);
+            // console.log(err);
         })
 }

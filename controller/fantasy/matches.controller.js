@@ -8,10 +8,10 @@ export const createMatches = async (req, res) => {
     const newMatch = new Match(matches);
     try {
         await newMatch.save();
-        console.log("Match added successfully");
+        // console.log("Match added successfully");
         res.status(201).json({ success: true, message: "Match added successfully", data: newMatch });
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         res.status(500).json({ success: false, message: "Server Error" });
     }
 }
@@ -22,6 +22,6 @@ export const getMatches = async (req, res) => {
     })
         .catch((err) => {
             res.status(500).send(err.message);
-            console.log(err);
+            // console.log(err);
         })
 }
